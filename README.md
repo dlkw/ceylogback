@@ -6,6 +6,8 @@ Configure ceylon.logging to use Logback as backend. (JVM runtime only, obviously
 * Call the toplevel function `configureLogbackLogging()`.
 * Normal Logback configuration (`logback.xml` etc.) will take place---put your `logback.xml` into your project's
   `resource/your/project/ROOT` directory.
+* You can now obtain loggers using Logback from the `ceylon.logging::logger(Category)` function.
+* Logger names will have a P or M prefixed if they're package or module loggers (maybe disputable).
 * Your Ceylon loggers will have a `priority` according to the Logback configuration, and you can assign it a new value.
 * This will get out of sync when you modify the level of the Logback loggers directly or change a configuration file that is tracked by the Logback configurator.
 
